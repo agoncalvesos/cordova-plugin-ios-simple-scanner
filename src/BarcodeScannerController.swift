@@ -119,7 +119,7 @@ class BarcodeScannerController : UIViewController, AVCaptureMetadataOutputObject
                 qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
                 qrCodeFrameView.layer.borderWidth = 2
                 view.addSubview(qrCodeFrameView)
-                view.view.bringSubview(toFront:qrCodeFrameView)
+                view.bringSubview(toFront:qrCodeFrameView)
             }
                 
             if(showGuide == "true") {
