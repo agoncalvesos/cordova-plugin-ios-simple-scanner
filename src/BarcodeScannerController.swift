@@ -92,7 +92,12 @@ class BarcodeScannerController : UIViewController, AVCaptureMetadataOutputObject
 
             // Set delegate and use the default dispatch queue to execute the call back
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.pdf417, AVMetadataObject.ObjectType.qr]
+            captureMetadataOutput.metadataObjectTypes = [
+                AVMetadataObject.ObjectType.pdf417,
+                AVMetadataObject.ObjectType.qr,
+                AVMetadataObject.ObjectType.ean8,
+                AVMetadataObject.ObjectType.ean13
+            ]
 
             // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
