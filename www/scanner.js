@@ -1,7 +1,7 @@
 var exec = require('cordova/exec');
 
 module.exports = {
-  scanBarcode: function(orientation, showGuide, successCallback, errorCallback) {
+  scan: function(orientation, showGuide, successCallback, errorCallback) {
     if (!successCallback && !errorCallback) {
       // Use promise if no callbacks were provided
       return new Promise((resolve, reject) => {

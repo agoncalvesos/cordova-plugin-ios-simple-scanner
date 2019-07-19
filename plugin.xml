@@ -6,8 +6,8 @@
     <description>Simple barcode scanner for iOS (PDF417 and QR Codes Supported).</description>
     <license>MIT</license>
     <keywords>cordova,simple,scanner,ios,pdf417,qr</keywords>
-    <js-module src="www/scanner.js" name="scanner">
-        <clobbers target="cordova.plugins.ios.simpleScanner" />
+    <js-module src="www/scanner.js" name="zBar">
+        <clobbers target="cloudSky.zBar" />
     </js-module>
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
